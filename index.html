@@ -7,20 +7,27 @@
     <meta name="description" content="Los 7 pasos para llevar tu servicio al cliente de 2 a 5 estrellas en menos de 60 días con Odereso" />
     <title>Adereso AI- Mejora tu servicio al cliente</title>
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P6LZ2LJX');</script>
+    <!-- Google Tag Manager (Deferred for performance) -->
+    <script>
+    // Diferir GTM hasta después del load para mejorar FCP
+    window.addEventListener('load', function() {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-P6LZ2LJX');
+    });
+    </script>
     <!-- End Google Tag Manager -->
     
     <!-- Preload critical resources -->
     <link rel="preload" as="image" href="/src/IMG/Mockup-vsl-2.webp" type="image/webp" fetchpriority="high">
     
-    <!-- Google Fonts - Outfit & Work Sans (Optimized) -->
+    <!-- Google Fonts - Outfit & Work Sans (Optimized with &text for critical chars) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload critical font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" as="style">
     <!-- Cargar solo los pesos que realmente usamos -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet"></noscript>
@@ -29,14 +36,35 @@
     <link rel="dns-prefetch" href="https://fast.wistia.com">
     <link rel="dns-prefetch" href="https://js.hsforms.net">
     
-    <!-- Wistia Player - Cargado de forma diferida -->
+    <!-- Critical CSS - Above the fold -->
     <style>
-      wistia-player[media-id='ytm1aekmsf']:not(:defined) { 
-        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ytm1aekmsf/swatch'); 
-        display: block; 
-        filter: blur(5px); 
-        padding-top: 56.25%; 
+      /* Reset & Base */
+      *{margin:0;padding:0;box-sizing:border-box}
+      body{font-family:'Work Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:#131415;color:#fff;line-height:1.6}
+      
+      /* Header Critical */
+      .header{padding:1rem 0;background:#131415}
+      .header-content{display:flex;flex-direction:column;align-items:center;gap:0.5rem}
+      .logo-image{width:32px;height:auto}
+      .header-badge{font-family:'Outfit',sans-serif;font-size:18px;font-weight:600;color:#fff;padding:8px 16px;border:1px solid #A2A2A2;border-radius:8px}
+      
+      /* Hero Critical */
+      .hero{padding:1rem 0 6rem;text-align:center}
+      .hero-title{font-size:46px;font-family:'Outfit',sans-serif;font-weight:600;margin-bottom:1.5rem;line-height:1.2}
+      .rating-text{font-size:122px;font-family:'Outfit',sans-serif;font-weight:600;color:#FFD540;line-height:1}
+      .hero-subtitle{font-size:40px;font-family:'Outfit',sans-serif;font-weight:400;margin-bottom:3rem}
+      .video-container{max-width:900px;margin:0 auto;padding:0 1.5rem}
+      
+      /* Mobile */
+      @media (max-width:767px){
+        .header-badge{font-size:12px;padding:6px 12px}
+        .hero-title{font-size:24px;margin-bottom:1rem}
+        .rating-text{font-size:72px}
+        .hero-subtitle{font-size:20px;margin-bottom:2rem}
       }
+      
+      /* Wistia Player */
+      wistia-player[media-id='ytm1aekmsf']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/ytm1aekmsf/swatch');display:block;filter:blur(5px);padding-top:56.25%}
     </style>
     
     <!-- HubSpot Forms - Cargado de forma diferida -->

@@ -1,4 +1,4 @@
-import logoCencosud from '../../IMG/cencosud.webp'
+import logoCencosud from '../../IMG/Cencosud-logo.webp'
 import logoMK from '../../IMG/captura.webp'
 import logoWalmart from '../../IMG/walmart.webp'
 import './Stats.css'
@@ -41,7 +41,15 @@ const Stats = () => {
               <div className="stat-value">{stat.value}</div>
               <p className="stat-description">{stat.description}</p>
               <div className="stat-logo">
-                <img src={stat.logo} alt={stat.logoAlt} className="stat-logo-image" loading="lazy" />
+                <img 
+                  src={stat.logo} 
+                  alt={stat.logoAlt} 
+                  className="stat-logo-image" 
+                  loading="lazy"
+                  decoding="async"
+                  width="300"
+                  height="157"
+                />
               </div>
             </div>
           ))}
