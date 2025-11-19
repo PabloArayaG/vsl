@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import mockupImage from '../../IMG/Mockup-vsl-2.webp'
+import mockupImageDesktop from '../../IMG/Mockup-vsl-2.webp'
+import mockupImageMobile from '../../IMG/mobile-vsl-2.webp'
 import './Hero.css'
 
 declare global {
@@ -58,15 +59,22 @@ const Hero = () => {
               className={`video-placeholder ${isPlaying ? 'hidden' : ''}`} 
               onClick={handlePlay}
             >
-              <img 
-                src={mockupImage} 
-                alt="Dashboard preview - Los 7 pasos para mejorar servicio al cliente"
-                className="mockup-image"
-                width="1055"
-                height="594"
-                loading="eager"
-                fetchPriority="high"
-              />
+              <picture>
+                <source 
+                  media="(max-width: 767px)" 
+                  srcSet={mockupImageMobile}
+                />
+                <img 
+                  src={mockupImageDesktop} 
+                  alt="Dashboard preview - Los 7 pasos para mejorar servicio al cliente"
+                  className="mockup-image"
+                  width="1055"
+                  height="594"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </picture>
               <button className="play-button" aria-label="Reproducir video">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                   <circle cx="30" cy="30" r="30" fill="rgba(0, 0, 0, 0.6)" />

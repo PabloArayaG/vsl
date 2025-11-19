@@ -10,14 +10,21 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
         },
+        assetFileNames: (assetInfo) => {
+          // Generar nombres con hash para mejor caching
+          if (assetInfo.name?.endsWith('.css')) {
+            return 'assets/[name]-[hash][extname]'
+          }
+          return 'assets/[name]-[hash][extname]'
+        },
       },
     },
-    cssCodeSplit: true,
-    minify: 'esbuild', // esbuild es más rápido y viene incluido
+    cssCodeSplit: false, // CSS en un solo archivo para mobile
+    minify: 'esbuild',
     target: 'esnext',
   },
   esbuild: {
-    drop: ['console', 'debugger'], // Eliminar console.log en producción
+    drop: ['console', 'debugger'],
   },
 })
 
