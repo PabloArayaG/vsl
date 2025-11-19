@@ -37,12 +37,10 @@ const Implementation = () => {
           {features.map((feature, index) => (
             <div key={index} className="implementation-card">
               <div className="implementation-icon">
-                {typeof feature.icon === 'string' && feature.icon.startsWith('/') ? (
-                  <img src={feature.icon} alt={feature.title} className="implementation-icon-image" />
-                ) : feature.icon.endsWith('.webp') ? (
+                {index === 0 ? (
                   <img src={feature.icon} alt={feature.title} className="implementation-icon-image" />
                 ) : (
-                  feature.icon
+                  <span className="implementation-icon-emoji">{feature.icon}</span>
                 )}
               </div>
               <h3 className="implementation-feature-title">{feature.title}</h3>
