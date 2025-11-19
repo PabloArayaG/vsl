@@ -32,8 +32,11 @@ const Hero = () => {
         <p className="hero-subtitle">en menos de 60 días</p>
         
         <div className="video-container">
-          {!isPlaying ? (
-            <div className="video-placeholder" onClick={handlePlay}>
+          <div className="video-wrapper">
+            <div 
+              className={`video-placeholder ${isPlaying ? 'hidden' : ''}`} 
+              onClick={handlePlay}
+            >
               <img 
                 src={mockupImage} 
                 alt="Dashboard preview - Los 7 pasos para mejorar servicio al cliente"
@@ -46,11 +49,12 @@ const Hero = () => {
                 </svg>
               </button>
             </div>
-          ) : (
-            <div className="wistia-video-wrapper">
-              <wistia-player media-id="ytm1aekmsf" aspect="1.7777777777777777"></wistia-player>
-            </div>
-          )}
+            {isPlaying && (
+              <div className="wistia-video-wrapper">
+                <wistia-player media-id="ytm1aekmsf" aspect="1.7777777777777777"></wistia-player>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>
