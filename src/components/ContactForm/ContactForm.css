@@ -1,0 +1,104 @@
+.contact-form-section {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-background);
+}
+
+.form-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  background-image: url('../../IMG/background-1webp-16.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 41, 64, 0.85);
+  border-radius: var(--radius-lg);
+  z-index: 0;
+}
+
+.form-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-family: var(--font-family-heading);
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.form-benefits {
+  list-style: none;
+  margin-bottom: var(--spacing-xl);
+  padding: 0;
+}
+
+.form-benefits li {
+  padding-left: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.form-benefits li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+.hubspot-form-container {
+  margin-top: var(--spacing-lg);
+}
+
+/* Estilos personalizados para el formulario de HubSpot */
+.hubspot-form-container :global(.hs-form) {
+  font-family: var(--font-family);
+}
+
+.hubspot-form-container :global(.hs-input) {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.hubspot-form-container :global(.hs-button) {
+  background-color: var(--color-primary);
+  color: #000;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hubspot-form-container :global(.hs-button):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(253, 184, 19, 0.4);
+}
+

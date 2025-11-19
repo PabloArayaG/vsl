@@ -1,0 +1,66 @@
+.problems {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-background);
+}
+
+.problems-title {
+  text-align: center;
+  font-size: 36px;
+  font-family: var(--font-family-heading);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xl);
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .problems-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.problem-card {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.problem-icon {
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.problem-icon-image {
+  max-width: 80px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.problem-title {
+  font-size: 20px;
+  font-family: var(--font-family-heading);
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.problem-description {
+  font-size: 16px;
+  font-family: var(--font-family);
+  color: #FFFFFF;
+  line-height: 1.6;
+}
+
