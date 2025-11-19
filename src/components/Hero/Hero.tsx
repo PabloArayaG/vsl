@@ -63,7 +63,7 @@ const Hero = () => {
                 alt="Dashboard preview - Los 7 pasos para mejorar servicio al cliente"
                 className="mockup-image"
                 loading="eager"
-                fetchpriority="high"
+                fetchPriority="high"
               />
               <button className="play-button" aria-label="Reproducir video">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none">

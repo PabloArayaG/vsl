@@ -8,7 +8,7 @@ const Header = () => {
         <div className="header-content">
           <div className="logo">
             <a href="https://adereso.ai" target="_blank" rel="noopener noreferrer">
-              <img src={logoOdereso} alt="Odereso" className="logo-image" loading="eager" fetchpriority="high" />
+              <img src={logoOdereso} alt="Odereso" className="logo-image" loading="eager" fetchPriority="high" />
             </a>
           </div>
           <div className="header-badge">
