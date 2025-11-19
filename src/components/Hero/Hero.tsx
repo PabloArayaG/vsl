@@ -62,6 +62,8 @@ const Hero = () => {
                 src={mockupImage} 
                 alt="Dashboard preview - Los 7 pasos para mejorar servicio al cliente"
                 className="mockup-image"
+                width="1055"
+                height="594"
                 loading="eager"
                 fetchPriority="high"
               />
