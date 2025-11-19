@@ -39,7 +39,7 @@ const Implementation = () => {
           {features.map((feature, index) => (
             <div key={index} className="implementation-card">
               <div className="implementation-icon">
-                <img src={feature.icon} alt={feature.title} className="implementation-icon-image" />
+                <img src={feature.icon} alt={feature.title} className="implementation-icon-image" loading="lazy" />
               </div>
               <h3 className="implementation-feature-title">{feature.title}</h3>
             </div>

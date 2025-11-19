@@ -10,7 +10,7 @@ const About = () => {
         
         <div className="about-content">
           <div className="about-image">
-            <img src={fotoCamilo} alt="Camilo López" className="profile-image" />
+            <img src={fotoCamilo} alt="Camilo López" className="profile-image" loading="lazy" />
           </div>
           
           <div className="about-text">
@@ -28,7 +28,7 @@ const About = () => {
           
           <div className="about-logo">
             <a href="https://adereso.ai" target="_blank" rel="noopener noreferrer">
-              <img src={logoOdereso} alt="Odereso" className="about-logo-image" />
+              <img src={logoOdereso} alt="Odereso" className="about-logo-image" loading="lazy" />
             </a>
           </div>
         </div>

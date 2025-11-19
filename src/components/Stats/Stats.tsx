@@ -41,7 +41,7 @@ const Stats = () => {
               <div className="stat-value">{stat.value}</div>
               <p className="stat-description">{stat.description}</p>
               <div className="stat-logo">
-                <img src={stat.logo} alt={stat.logoAlt} className="stat-logo-image" />
+                <img src={stat.logo} alt={stat.logoAlt} className="stat-logo-image" loading="lazy" />
               </div>
             </div>
           ))}

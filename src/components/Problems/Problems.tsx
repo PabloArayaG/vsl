@@ -37,7 +37,7 @@ const Problems = () => {
           {problems.map((problem, index) => (
             <div key={index} className="problem-card">
               <div className="problem-icon">
-                <img src={problem.icon} alt={problem.title} className="problem-icon-image" />
+                <img src={problem.icon} alt={problem.title} className="problem-icon-image" loading="lazy" />
               </div>
               <h3 className="problem-title">{problem.title}</h3>
               <p className="problem-description">{problem.description}</p>

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './ContactForm.css'
 
 declare global {
@@ -8,27 +8,65 @@ declare global {
 }
 
 const ContactForm = () => {
-  useEffect(() => {
-    // Esperar a que el script de HubSpot esté cargado
-    const loadHubSpotForm = () => {
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          portalId: "23480943",
-          formId: "9e001a54-1d84-4118-91cf-71c4ed74b111",
-          region: "na1",
-          target: '#hubspot-form-container'
-        });
-      } else {
-        // Si el script aún no está cargado, intentar de nuevo en 100ms
-        setTimeout(loadHubSpotForm, 100);
-      }
-    };
+  const [scriptLoaded, setScriptLoaded] = useState(false)
+  const formRef = useRef<HTMLDivElement>(null)
 
-    loadHubSpotForm();
-  }, []);
+  useEffect(() => {
+    // Intersection Observer para cargar HubSpot solo cuando el formulario esté visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !scriptLoaded) {
+            loadHubSpotScript()
+          }
+        })
+      },
+      {
+        rootMargin: '100px' // Cargar 100px antes de que sea visible
+      }
+    )
+
+    if (formRef.current) {
+      observer.observe(formRef.current)
+    }
+
+    return () => {
+      if (formRef.current) {
+        observer.unobserve(formRef.current)
+      }
+    }
+  }, [scriptLoaded])
+
+  const loadHubSpotScript = () => {
+    if (scriptLoaded) return
+    
+    const script = document.createElement('script')
+    script.src = '//js.hsforms.net/forms/embed/v2.js'
+    script.charset = 'utf-8'
+    script.type = 'text/javascript'
+    script.async = true
+    script.onload = () => {
+      setScriptLoaded(true)
+      loadHubSpotForm()
+    }
+    document.head.appendChild(script)
+  }
+
+  const loadHubSpotForm = () => {
+    if (window.hbspt) {
+      window.hbspt.forms.create({
+        portalId: "23480943",
+        formId: "9e001a54-1d84-4118-91cf-71c4ed74b111",
+        region: "na1",
+        target: '#hubspot-form-container'
+      })
+    } else {
+      setTimeout(loadHubSpotForm, 100)
+    }
+  }
 
   return (
-    <section className="contact-form-section">
+    <section className="contact-form-section" ref={formRef}>
       <div className="container">
         <div className="form-wrapper">
           <h2 className="form-title">¿Listo para implementar esto en tu empresa?</h2>
