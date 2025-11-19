@@ -12,18 +12,18 @@ interface Problem {
 const problems: Problem[] = [
   {
     icon: iconBajo,
-    title: 'Tu servicio al cliente aún no es bueno, rápido y útil',
-    description: 'Depende de equipos grandes para atender tu operación y tus costos de servicio solo aumentan.'
+    title: 'Tu servicio al cliente aún es lento, manual y caro',
+    description: 'Dependes de equipos grandes para atender lo repetitivo y tus costos operativos siguen creciendo.'
   },
   {
     icon: iconSad,
     title: 'Tus métricas están por debajo del promedio',
-    description: 'Tu CSAT no mejora, tus tiempos de respuesta son lentos, y antes que la competencia.'
+    description: 'Tu CSAT no mejora, tus tiempos de respuesta son lentos, y sientes que te estás quedando atrás de tu competencia.'
   },
   {
     icon: iconFrustro,
     title: 'Las temporadas altas colapsan tu operación',
-    description: 'En campañas o fechas clave, tu equipo no se da abasto, los tú clientes se frustran y eso impacta tu reputación.'
+    description: 'En campañas o fechas clave, tu equipo se satura, los SLA revientan y los clientes se quejan del servicio.'
   }
 ]
 

@@ -35,7 +35,7 @@ const ContactForm = () => {
           <p className="form-subtitle">Agenda 30 minutos con nuestro equipo y obtén:</p>
           
           <ul className="form-benefits">
-            <li>Diagnóstico personalizado de atención al cliente</li>
+            <li>Diagnóstico personalizado de tu operación actual</li>
             <li>Roadmap de automatización específico para tu industria</li>
             <li>Proyección de ahorro en costos y tiempos (ROI estimado)</li>
             <li>Casos de éxito de empresas similares a la tuya</li>

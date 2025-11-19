@@ -7,7 +7,9 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <img src={logoOdereso} alt="Odereso" className="logo-image" />
+            <a href="https://adereso.ai" target="_blank" rel="noopener noreferrer">
+              <img src={logoOdereso} alt="Odereso" className="logo-image" />
+            </a>
           </div>
           <div className="header-badge">
             Solo para marcas con +2000 consultas mensuales.

@@ -1,6 +1,6 @@
 :root {
   /* Colors */
-  --color-primary: #FDB813;
+  --color-primary: #FFD540;
   --color-secondary: #2C4F7C;
   --color-background: #131415;
   --color-surface: #1a1a1a;
@@ -53,6 +53,12 @@ body {
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
 }
 
 button {

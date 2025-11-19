@@ -1,4 +1,6 @@
 import iconShinesia from '../../IMG/shinesia.webp'
+import iconTicket from '../../IMG/ticket.svg'
+import iconAcompanamiento from '../../IMG/acompanamiento.svg'
 import './Implementation.css'
 
 interface ImplementationFeature {
@@ -14,12 +16,12 @@ const features: ImplementationFeature[] = [
     description: ''
   },
   {
-    icon: '📝',
+    icon: iconTicket,
     title: 'Analiza y optimiza tu operación en tiempo real',
     description: ''
   },
   {
-    icon: '👥',
+    icon: iconAcompanamiento,
     title: 'Cuenta con expertos que te guían en cada paso',
     description: ''
   }
@@ -37,11 +39,7 @@ const Implementation = () => {
           {features.map((feature, index) => (
             <div key={index} className="implementation-card">
               <div className="implementation-icon">
-                {index === 0 ? (
-                  <img src={feature.icon} alt={feature.title} className="implementation-icon-image" />
-                ) : (
-                  <span className="implementation-icon-emoji">{feature.icon}</span>
-                )}
+                <img src={feature.icon} alt={feature.title} className="implementation-icon-image" />
               </div>
               <h3 className="implementation-feature-title">{feature.title}</h3>
             </div>

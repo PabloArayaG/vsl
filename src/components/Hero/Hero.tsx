@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import mockupImage from '../../IMG/mockup-vsl-1024x608.webp'
+import mockupImage from '../../IMG/Mockup-vsl.webp'
 import './Hero.css'
 
 declare global {

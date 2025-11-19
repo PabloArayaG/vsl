@@ -1,23 +1,32 @@
-import type { Stat } from '../../types'
+import logoCencosud from '../../IMG/cencosud.webp'
+import logoMK from '../../IMG/captura.webp'
+import logoWalmart from '../../IMG/walmart.webp'
 import './Stats.css'
+
+interface Stat {
+  value: string;
+  description: string;
+  logo: string;
+  logoAlt: string;
+}
 
 const stats: Stat[] = [
   {
     value: '28%',
     description: 'Reducción en costos operativos',
-    logo: 'Cencosud',
+    logo: logoCencosud,
     logoAlt: 'Cencosud'
   },
   {
     value: '50X',
     description: 'Disminución tiempo de respuesta',
-    logo: 'K',
-    logoAlt: 'K'
+    logo: logoMK,
+    logoAlt: 'MK'
   },
   {
     value: '500.000+',
-    description: 'Conversaciones procesadas en tiempo real',
-    logo: 'Walmart',
+    description: 'Conversaciones contestadas en menos de 5 minutos',
+    logo: logoWalmart,
     logoAlt: 'Walmart'
   }
 ]
@@ -32,7 +41,7 @@ const Stats = () => {
               <div className="stat-value">{stat.value}</div>
               <p className="stat-description">{stat.description}</p>
               <div className="stat-logo">
-                <div className="logo-placeholder">{stat.logo}</div>
+                <img src={stat.logo} alt={stat.logoAlt} className="stat-logo-image" />
               </div>
             </div>
           ))}

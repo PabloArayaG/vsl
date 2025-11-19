@@ -1,0 +1,107 @@
+.scroll-banner {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+  border-radius: 16px 16px 0 0;
+  padding: 20px 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e8e8e8;
+  border-bottom: none;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.scroll-banner.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.scroll-banner-content {
+  /* En una línea en desktop */
+}
+
+.scroll-banner-title {
+  font-family: var(--font-family-heading);
+  font-size: 26px;
+  font-weight: 700;
+  color: #131415;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.scroll-banner-button-wrapper {
+  /* Centrado */
+}
+
+.scroll-banner-button {
+  background-color: #FFD540;
+  color: #131415;
+  font-family: var(--font-family-heading);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 213, 64, 0.3);
+}
+
+.scroll-banner-button:hover {
+  background-color: #ffd01a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 213, 64, 0.4);
+}
+
+.scroll-banner-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scroll-banner {
+    padding: 16px 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .scroll-banner-title {
+    font-size: 16px;
+  }
+
+  .scroll-banner-button {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-banner {
+    padding: 14px 15px;
+    gap: 10px;
+  }
+  
+  .scroll-banner-title {
+    font-size: 14px;
+  }
+
+  .scroll-banner-button {
+    padding: 10px 22px;
+    font-size: 13px;
+  }
+}
+

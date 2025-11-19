@@ -5,7 +5,7 @@ import Problems from './components/Problems/Problems'
 import Implementation from './components/Implementation/Implementation'
 import Stats from './components/Stats/Stats'
 import About from './components/About/About'
-import Footer from './components/Footer/Footer'
+import ScrollBanner from './components/ScrollBanner/ScrollBanner'
 import './App.css'
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Stats />
         <About />
       </main>
-      <Footer />
+      <ScrollBanner />
     </div>
   )
 }

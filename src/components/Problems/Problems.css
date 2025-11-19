@@ -3,6 +3,12 @@
   background-color: var(--color-background);
 }
 
+@media (max-width: 767px) {
+  .problems {
+    padding: var(--spacing-lg) 0 var(--spacing-2xl) 0;
+  }
+}
+
 .problems-title {
   text-align: center;
   font-size: 36px;
@@ -11,12 +17,25 @@
   margin-bottom: var(--spacing-xl);
 }
 
+@media (max-width: 767px) {
+  .problems-title {
+    font-size: 24px;
+    margin-bottom: var(--spacing-md);
+  }
+}
+
 .problems-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-xl);
   max-width: 1000px;
   margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .problems-grid {
+    gap: var(--spacing-md);
+  }
 }
 
 @media (min-width: 768px) {
@@ -30,6 +49,12 @@
   padding: var(--spacing-lg);
 }
 
+@media (max-width: 767px) {
+  .problem-card {
+    padding: var(--spacing-sm) var(--spacing-xs);
+  }
+}
+
 .problem-icon {
   margin-bottom: var(--spacing-sm);
   display: flex;
@@ -38,12 +63,26 @@
   height: 80px;
 }
 
+@media (max-width: 767px) {
+  .problem-icon {
+    height: 50px;
+    margin-bottom: var(--spacing-xs);
+  }
+}
+
 .problem-icon-image {
   max-width: 80px;
   max-height: 80px;
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .problem-icon-image {
+    max-width: 50px;
+    max-height: 50px;
+  }
 }
 
 .problem-title {
@@ -57,10 +96,26 @@
   justify-content: center;
 }
 
+@media (max-width: 767px) {
+  .problem-title {
+    font-size: 16px;
+    min-height: auto;
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.3;
+  }
+}
+
 .problem-description {
   font-size: 16px;
   font-family: var(--font-family);
   color: #FFFFFF;
   line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .problem-description {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 
