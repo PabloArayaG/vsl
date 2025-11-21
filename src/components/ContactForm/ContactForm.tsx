@@ -68,8 +68,8 @@ const ContactForm = () => {
   return (
     <section className="contact-form-section" ref={formRef}>
       <div className="container">
+        <p className="form-step">2. Implementa estos 7 pasos con Adereso</p>
         <div className="form-wrapper">
-          <h2 className="form-title">¿Listo para implementar esto en tu empresa?</h2>
           <p className="form-subtitle">Agenda 30 minutos con nuestro equipo y obtén:</p>
           
           <ul className="form-benefits">

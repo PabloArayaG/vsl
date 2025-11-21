@@ -37,6 +37,14 @@
   color: var(--color-text);
 }
 
+.hero-step {
+  font-size: 24px;
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
 .video-container {
   max-width: 900px;
   margin: 0 auto;
@@ -142,6 +150,12 @@
   .hero-subtitle {
     font-size: 20px;
     margin-bottom: var(--spacing-2xl);
+  }
+  
+  .hero-step {
+    font-size: 18px;
+    padding: 0 var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
   }
 
   .video-container {

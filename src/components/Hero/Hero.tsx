@@ -53,6 +53,8 @@ const Hero = () => {
         </div>
         <p className="hero-subtitle">en menos de 60 días</p>
         
+        <p className="hero-step">1. Mira el entrenamiento gratuito</p>
+        
         <div className="video-container">
           <div className="video-wrapper">
             <div 
