@@ -145,7 +145,21 @@
   }
 
   .video-container {
-    padding: 0 var(--spacing-sm);
+    padding: 0; /* Ancho completo en mobile */
+    max-width: 100%;
+  }
+  
+  .video-wrapper {
+    width: 100%;
+    border-radius: 0; /* Sin border-radius en mobile para aprovechar todo el espacio */
+  }
+  
+  .video-placeholder {
+    border-radius: 0;
+  }
+  
+  .mockup-image {
+    border-radius: 0;
   }
 }
 

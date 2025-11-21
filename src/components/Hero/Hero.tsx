@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import mockupImageDesktop from '../../IMG/Mockup-vsl-2.webp'
-import mockupImageMobile from '../../IMG/mobile-vsl-2.webp'
+import mockupImageMobile from '../../IMG/vsl-mobile_11zon.webp'
 import './Hero.css'
 
 declare global {
