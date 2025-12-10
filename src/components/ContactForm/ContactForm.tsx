@@ -70,7 +70,7 @@ const ContactForm = () => {
       <div className="container">
         <p className="form-step">2. Implementa estos 7 pasos con Adereso</p>
         <div className="form-wrapper">
-          <p className="form-title">Solo para marcas con +2000 conversaciones mensuales (+70 al día)</p>
+          <p className="form-title">Solo para marcas con más de 5 ejecutivos</p>
           <p className="form-subtitle">Agenda 30 minutos con nuestro equipo y obtén:</p>
           
           <ul className="form-benefits">
