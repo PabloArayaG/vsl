@@ -12,7 +12,7 @@ const Header = () => {
             </a>
           </div>
           <div className="header-badge">
-            Solo para marcas con +2000 consultas mensuales.
+            Solo para marcas con más de 5 ejecutivos.
           </div>
         </div>
       </div>
